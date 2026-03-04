@@ -13,7 +13,7 @@
    - Chrome/Edge: `F12` → вкладка **Console**
 3. Открой файл [`ym-track-collector.js`](./ym-track-collector.js) в этом репозитории.
 4. Скопируй весь код (Ctrl+A → Ctrl+C) и вставь в Console → Enter.
-5. Скроль плейлист вниз (можно быстро).
+5. Скроль плейлист вниз.
 6. Когда закончил — перестань скроллить и нажми **Finalize capture** в появившейся панели.
 7. Скачай `tracks.txt` или `tracks.csv`.
 
@@ -21,7 +21,7 @@
 
 ## Форматы
 - TXT: `Artist - Title`
-- CSV: `Artist,Title,Duration` (если duration собирается)
+- CSV: `Artist,Title,Duration`
 
 ---
 
