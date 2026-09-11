@@ -1,186 +1,130 @@
-# YM Track Collector (Console)
+# YM Track Collector
 
-A simple console script that collects tracks from **Yandex Music playlists**.
+A small console script for collecting tracks from **Yandex Music playlists**.
 
-The script works with virtualized lists used on the Yandex Music website.  
-Scroll the playlist, capture tracks, and export them to **TXT or CSV**.
+Yandex Music uses virtualized lists: not every track is present in the page DOM at once. Open a playlist, run the script in DevTools Console, scroll through the playlist, and export the collected tracks to TXT or CSV.
 
-Tool by **idaniil24**
+Tool by **idaniil24**.
 
 ---
 
-# 🇬🇧 English
+## English
 
-## Features
+### Features
 
 - Collects tracks from Yandex Music playlists
-- Works with virtualized lists
-- Export tracks to TXT
-- Export tracks to CSV
-- Simple console usage (no extensions required)
+- Works with virtualized lists and lazy-loaded rows
+- Watches both scroll events and DOM updates
+- Exports tracks to TXT
+- Exports tracks to CSV with `Artist,Title,Duration`
+- Can be pasted directly into DevTools Console
 
----
+### How to Use
 
-## How to use
+1. Open a playlist on **Yandex Music**.
+2. Open **DevTools**.
 
-1. Open a playlist on **Yandex Music**
-2. Open **DevTools**
-
-```
-F12 → Console
-```
-
-3. Open the file
-
-```
-ym-track-collector.js
+```text
+F12 -> Console
 ```
 
-4. Copy the entire script and paste it into the Console
-5. Press **Enter**
-6. Scroll the playlist (you can scroll fast)
-7. When finished scrolling press **Finalize capture**
-8. Download the tracks as `.txt` or `.csv`
+3. Open `ym-track-collector.js`.
+4. Copy the entire script and paste it into the Console.
+5. Press **Enter**.
+6. Scroll the playlist until the needed tracks have appeared.
+7. Press **Finalize capture**.
+8. Download the result as `.txt` or `.csv`.
 
----
+### Output Formats
 
-## Output formats
+TXT:
 
-TXT
-
-```
+```text
 Artist - Title
 ```
 
-CSV
+CSV:
 
-```
+```csv
 Artist,Title,Duration
 ```
 
 ---
 
-## Notes
+## Русская Версия
 
-Yandex Music uses **virtualized lists**, which means tracks only appear in the DOM when you scroll.
-
-Because of this you need to scroll the playlist before capturing all tracks.
-
----
-
-## Support the project
-
-If this tool helped you, consider supporting development.
-
-### Crypto donations
-
-**TON**
-
-```
-UQDUoyQkq99JbeA7lFRivIaCzsNxSowntmTnlRAu8fDU0qvi
-```
-
-**ETH (ERC20)**
-
-```
-0x211b376c20c67942a95ba235aef8611cec26b280
-```
-
-**USDT (TRC20)**
-
-```
-TMu2MLDVnjogZjL6K3w5qiBnNePTXNhpNg
-```
-
-Thank you for the support ❤️
-
-⭐ If you like this project, please star the repository.
-
----
-
-# 🇷🇺 Русская версия
-
-## Описание
+### Описание
 
 Скрипт для сбора треков из **плейлистов Яндекс Музыки** через DevTools Console.
 
-Работает с виртуализированными списками сайта и позволяет экспортировать треки в:
+Сайт Яндекс Музыки использует виртуализированные списки: не все треки находятся в DOM одновременно. Поэтому нужно запустить скрипт, пролистать плейлист и затем скачать собранный список.
 
-- TXT
-- CSV
+### Возможности
 
----
+- Собирает треки из плейлистов Яндекс Музыки
+- Работает с виртуализированными и лениво подгружаемыми списками
+- Отслеживает прокрутку и изменения DOM
+- Экспортирует треки в TXT
+- Экспортирует треки в CSV с колонками `Artist,Title,Duration`
+- Не требует установки расширений
 
-## Как использовать
+### Как Использовать
 
-1. Откройте плейлист в **Яндекс Музыке**
-2. Откройте **DevTools**
+1. Откройте плейлист в **Яндекс Музыке**.
+2. Откройте **DevTools**.
 
-```
-F12 → Console
-```
-
-3. Откройте файл
-
-```
-ym-track-collector.js
+```text
+F12 -> Console
 ```
 
-4. Скопируйте весь код
-5. Вставьте его в **Console**
-6. Нажмите **Enter**
-7. Пролистайте плейлист вниз (можно быстро)
-8. После завершения нажмите **Finalize capture**
-9. Скачайте список треков в `.txt` или `.csv`
+3. Откройте файл `ym-track-collector.js`.
+4. Скопируйте весь код.
+5. Вставьте его в **Console**.
+6. Нажмите **Enter**.
+7. Пролистайте плейлист до нужного места или до конца.
+8. Нажмите **Finalize capture**.
+9. Скачайте список треков в `.txt` или `.csv`.
 
----
+### Форматы
 
-## Форматы
+TXT:
 
-TXT
-
-```
+```text
 Исполнитель - Название
 ```
 
-CSV
+CSV:
 
-```
-Исполнитель,Название,Длительность
+```csv
+Artist,Title,Duration
 ```
 
 ---
 
-## Примечание
+## Support the Project
 
-Сайт Яндекс Музыки использует **виртуализацию списка**, поэтому треки появляются в DOM только при прокрутке.
+If this tool helped you, consider supporting development.
 
-Чтобы собрать все треки, нужно пролистать плейлист.
-
----
-
-## Поддержать проект
-
-Если скрипт оказался полезным, вы можете поддержать развитие проекта.
-
-### Криптодонаты
+### Crypto Donations
 
 **TON**
 
-```
+```text
 UQDUoyQkq99JbeA7lFRivIaCzsNxSowntmTnlRAu8fDU0qvi
 ```
 
 **ETH (ERC20)**
 
-```
+```text
 0x211b376c20c67942a95ba235aef8611cec26b280
 ```
 
 **USDT (TRC20)**
 
-```
+```text
 TMu2MLDVnjogZjL6K3w5qiBnNePTXNhpNg
 ```
 
-Спасибо за поддержку ❤️
+Thank you for the support.
+
+If you like this project, please star the repository.
